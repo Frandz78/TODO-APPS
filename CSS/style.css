@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #1a2130;
+}
+
+header {
+  background-color: #005c78;
+  color: #f3f7ec;
+  padding: 16px;
+  cursor: pointer;
+}
+
+header > h1 {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px 200px;
+}
+
+.input_section {
+  padding: 20px;
+  background-color: #f3f7ec;
+  border-radius: 16px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.input_section > .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.input_section > .container > h2 {
+  font-size: 31px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.input_section > .container > form > .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.input_section > .container > form > .form-group > label {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.input_section > .container > form > .form-group > input[type="text"],
+.input_section > .container > form > .form-group > input[type="date"],
+.input_section > .container > form > .form-group > textarea {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 16px;
+  margin-bottom: 10px;
+  border: 2px solid #006989;
+  border-radius: 15px;
+}
+
+.input_section > .container > form > .btn-submit {
+  padding: 7px 16px;
+  border: 2px solid #006989;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.input_section > .container > form > .btn-submit:hover {
+  background-color: #005c78;
+  color: #f3f7ec;
+}
+
+.todos_section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.todos_section > .container {
+  width: 100%;
+  background-color: #f3f7ec;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+/* .item {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.item > .inner h2 {
+  margin-bottom: unset;
+}
+
+.item > .inner p {
+  margin-top: 5px;
+} */
+
+.item {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column; /* Mengatur arah flex ke kolom */
+  max-width: 100%; /* Memastikan elemen tidak melebihi lebar container */
+  flex-wrap: wrap; /* Mengatur elemen untuk membungkus jika melebihi container */
+}
+
+.inner h2,
+.inner p {
+  font-size: 18px;
+  margin: 7px 0; /* Menghapus margin untuk mencegah overflow */
+  word-wrap: break-word; /* Memastikan teks yang panjang akan membungkus ke baris berikutnya */
+  overflow-wrap: break-word; /* Menangani teks panjang agar terbungkus */
+  white-space: normal; /* Membiarkan teks membungkus ke baris baru */
+  max-width: 80%; /* Memastikan teks tidak melebihi lebar container */
+  box-sizing: border-box; /* Memastikan padding dan border dimasukkan dalam lebar elemen */
+}
+
+.check-button {
+  font-size: 30px;
+  color: #006989;
+  position: absolute;
+  right: 30px;
+  line-height: 50%;
+}
+.check-button:hover {
+  color: #043646;
+}
+
+.undo-button {
+  font-size: 30px;
+  color: #006989;
+  position: absolute;
+  right: 70px;
+  line-height: 50%;
+}
+.undo-button:hover {
+  color: #043646;
+}
+
+.trash-button {
+  font-size: 30px;
+  color: #006989;
+  position: absolute;
+  right: 30px;
+  line-height: 50%;
+}
+.trash-button:hover {
+  color: #043646;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 20px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header > h1 {
+    font-size: 28px;
+  }
+
+  .input_section > .container > h2 {
+    font-size: 25px;
+  }
+
+  .inner h2,
+  .inner p {
+    font-size: 12px;
+  }
+
+  .check-button {
+    font-size: 20px;
+  }
+  .undo-button {
+    font-size: 20px;
+  }
+  .trash-button {
+    font-size: 20px;
+  }
+}
